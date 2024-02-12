@@ -24,6 +24,7 @@ func renderTemplate(w http.ResponseWriter, tmpl string) {
 	if err != nil {
 		fmt.Println("error parsing template:", err)
 		return
+		return
 	}
 }
 
@@ -33,6 +34,7 @@ func main() {
 	http.HandleFunc("/", Home)
 	http.HandleFunc("/about", About)
 
+	//test
 	fmt.Printf(fmt.Sprintf("Starting application on port %s", portNumber))
 	_ = http.ListenAndServe(portNumber, nil)
 }
