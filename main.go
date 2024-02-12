@@ -33,6 +33,6 @@ func main() {
 	http.HandleFunc("/", Home)
 	http.HandleFunc("/about", About)
 
-	fmt.Printf(fmt.Sprintf("Starting application on port %s", portNumber))
+	fmt.Fprintf(fmt.Sprintf("Starting application on port %s", portNumber))
 	_ = http.ListenAndServe(portNumber, nil)
 }
