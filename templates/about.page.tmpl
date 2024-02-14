@@ -12,5 +12,12 @@
                 </div>
             </diV>
         </div>
+        <p>
+            {{if ne (index .StringMap "remote_ip") ""}}
+                Your remote IP address is {{index .StringMap "remote_ip"}}
+            {{else}}
+                I don't know your ip address yet. Visit the <a href="/">Home Page </a> so I cant set it.
+            {{end}}
+        </p>
 
 {{end}}
