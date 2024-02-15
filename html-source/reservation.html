@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
-            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.2/dist/css/datepicker-bs4.min.css"> 
     <style>
         .my-footer{
             height: 5em;
@@ -71,24 +72,25 @@
                 <form action="reservation.html" method="GET" novalidate class="needs-validation">
 
 
-                    <div class="form-row">
+                  <form action="reservation.html" method="post" novalidate class="needs-validation">
+                    <input type="hidden" name="csrf_token" value="{{.CSRFToken}}">
+                    <div class="row">
                         <div class="col">
-                    <div class="form-group">
-                      <label for="start_date">Starting Date</label>
-                      <input required type="date" class="form-control" id="start_date" aria-describedby="startDateHelp" name="start_date" placeholder="Enter date">
-                      <small id="startDateHelp" class="form-text text-muted">Enter your starting date in the form of YYYY-MM-DD</small>
-                    </div>
+                            <div class="row" id="reservation-dates">
+                                <div class="col-md-6">
+                                    <input required class="form-control" type="text" name="start" placeholder="Arrival">
+                                </div>
+                                <div class="col-md-6">
+                                    <input required class="form-control" type="text" name="end" placeholder="Departure">
+                                </div>
+                            </div>
                         </div>
-                    
-                        <div class="col">
-                            <div class="form-group">
-                        <label for="end_date">Ending Date</label>
-                        <input required type="date" class="form-control" id="start_date" aria-describedby="endDateHelp" name="end_date" placeholder="Enter date">
-                        <small id="endDateHelp" class="form-text text-muted">Enter your ending date in the form of YYYY-MM-DD</small>
-                      </div>
                     </div>
-                    </div>
+    
+                    <hr>
+    
                     <button type="submit" class="btn btn-primary">Search Availability</button>
+    
                 </form>
             </div>
         </div>
@@ -125,8 +127,10 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" 
         crossorigin="anonymous"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.2/dist/js/datepicker-full.min.js"></script>
+        <script src="https://unpkg.com/notie"></script>
         <script src="script.js"></script>
+        
     
 </body>
 </html>

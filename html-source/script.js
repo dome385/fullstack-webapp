@@ -1,3 +1,25 @@
+
+
+
+function notify (msg, msgtype) {
+  notie.alert({
+    type: msgtype,
+    text: msg,
+  })
+}
+
+document.getElementById("colorButton").addEventListener("click", function () {
+  notify("This is my message", "success")
+})
+
+
+const elem = document.getElementById('reservation-dates');
+    const rangePicker = new DateRangePicker(elem, {
+        format: "dd-mm-yyyy",
+    });
+
+
+
 (function() {
     'use strict';
     window.addEventListener('load', function() {
@@ -15,3 +37,5 @@
       });
     }, false);
   })();
+
+
