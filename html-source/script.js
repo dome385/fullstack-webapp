@@ -1,5 +1,3 @@
-console.log("I am printing from Javascript");
-
 (function() {
     'use strict';
     window.addEventListener('load', function() {
