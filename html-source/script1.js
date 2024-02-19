@@ -9,7 +9,7 @@ function notify (msg, msgtype) {
   })
 }
 
-  document.getElementById("colorButton").addEventListener("click", function () {
+  document.getElementsByClassName("form-control").addEventListener("click", function () {
     let html = `
     <form id="check-availability-form" action="" method="POST" novalidate class="needs-validation"> 
       <div class="form-row">
