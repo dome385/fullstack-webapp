@@ -37,8 +37,10 @@
 
 <script>
 
+
+
  document.getElementById("check-availability-button").addEventListener("click", function () {
-  
+  let attention = Prompt();
     let html = `
     <form id="check-availability-form" action="" method="POST" novalidate class="needs-validation"> 
       <div class="form-row">
@@ -54,8 +56,16 @@
         </div>
       </div>
     </form>`
-    attention.custom({msg: html, title: "Choose your dates"});
-  })
+    attention.custom({
+      msg: html, 
+      title: "Choose your dates",
+      callback: function(result) {
+                console.log("called");
+
+                
+            }
+        });
+    })
 
 </script>
 
