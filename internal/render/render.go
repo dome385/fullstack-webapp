@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 	"path/filepath"
-	"webapp/pkg/config"
-	"webapp/pkg/models"
+	"webapp/internal/config"
+	"webapp/internal/models"
 
 	"github.com/justinas/nosurf"
 )

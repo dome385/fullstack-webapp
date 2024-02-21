@@ -2,8 +2,8 @@ package main
 
 import (
 	"net/http"
-	"webapp/pkg/config"
-	"webapp/pkg/handlers"
+	"webapp/internal/config"
+	"webapp/internal/handlers"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"

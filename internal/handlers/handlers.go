@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"webapp/pkg/config"
-	"webapp/pkg/models"
-	"webapp/pkg/render"
+	"webapp/internal/config"
+	"webapp/internal/models"
+	"webapp/internal/render"
 )
 
 // Repo the repository used by the handlers

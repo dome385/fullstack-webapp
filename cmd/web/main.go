@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/http"
 	"time"
-	"webapp/pkg/config"
-	"webapp/pkg/handlers"
-	"webapp/pkg/render"
+	"webapp/internal/config"
+	"webapp/internal/handlers"
+	"webapp/internal/render"
 
 	"github.com/alexedwards/scs/v2"
 )
